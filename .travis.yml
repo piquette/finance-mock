@@ -1,0 +1,30 @@
+language: go
+
+go:
+  - 1.9
+
+# magic word to use faster/newer container-based architecture
+sudo: false
+
+services:
+  - docker
+
+before_install:
+  - go get -u github.com/golang/lint/golint
+  - go get -u github.com/jteeuwen/go-bindata/...
+
+script:
+  - go generate
+  - make test
+  - make vet
+  - scripts/check_gofmt.sh
+
+  # Build and test the Docker image
+  - docker build -t finance-mock .
+  - docker run -d --name finance-mock -p 12111:12111 finance-mock
+  - docker ps -a
+  - docker exec -it finance-mock /bin/sh -c "cd /go/src/github.com/piquette/finance-mock/; go test ./..."
+
+notifications:
+  email:
+    on_success: never

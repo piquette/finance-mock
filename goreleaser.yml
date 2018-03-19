@@ -1,0 +1,8 @@
+build:
+  binary: finance-mock
+  goos:
+    - windows
+    - darwin
+    - linux
+  goarch:
+    - amd64
