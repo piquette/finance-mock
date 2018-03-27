@@ -33,10 +33,12 @@ func main() {
 	var port int
 	var fixturesPath string
 	var specPath string
+	var unix string
 
 	flag.IntVar(&port, "port", defaultPort, "Port to listen on")
 	flag.StringVar(&fixturesPath, "fixtures", defaultFixturesPath, "Path to fixtures to use instead of bundled version")
 	flag.StringVar(&specPath, "spec", defaultSpecPath, "Path to spec to use instead of bundled version")
+	flag.StringVar(&unix, "unix", "", "Unix socket to listen on")
 	flag.BoolVar(&verbose, "verbose", false, "Enable verbose mode")
 	flag.BoolVar(&showVersion, "version", false, "Show version and exit")
 	flag.Parse()
@@ -44,6 +46,11 @@ func main() {
 	if showVersion || len(flag.Args()) == 1 && flag.Arg(0) == "version" {
 		fmt.Printf("%s\n", version)
 		return
+	}
+
+	if unix != "" && port != 0 {
+		flag.Usage()
+		abort("Specify only one of -port or -unix\n")
 	}
 
 	// Get spec.
@@ -60,6 +67,7 @@ func main() {
 
 	// Stub server.
 	stub := server.StubServer{Fixtures: fixtures, Spec: spec, Verbose: verbose}
+	server.Version = version
 
 	// Initialize server router.
 	err = stub.InitRouter()
@@ -72,7 +80,7 @@ func main() {
 	s := http.Server{}
 
 	// Init listener.
-	listener, err := getListener(port)
+	listener, err := getListener(port, unix)
 	if err != nil {
 		abort(err.Error())
 	}
@@ -104,16 +112,20 @@ func getFixtures(fixturesPath string) (*fixture.Fixtures, error) {
 	return &fixtures, nil
 }
 
-func getListener(port int) (net.Listener, error) {
+func getListener(port int, unix string) (net.Listener, error) {
 	var err error
 	var listener net.Listener
 
-	if port == 0 {
-		port = defaultPort
+	if unix != "" {
+		listener, err = net.Listen("unix", unix)
+		fmt.Printf("Listening on unix socket %v\n", unix)
+	} else {
+		if port == 0 {
+			port = defaultPort
+		}
+		listener, err = net.Listen("tcp", ":"+strconv.Itoa(port))
+		fmt.Printf("Listening on port %v\n", port)
 	}
-
-	listener, err = net.Listen("tcp", ":"+strconv.Itoa(port))
-	fmt.Printf("Listening on port %v\n", port)
 
 	if err != nil {
 		return nil, fmt.Errorf("error listening on socket: %v\n", err)

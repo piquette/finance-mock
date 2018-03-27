@@ -142,7 +142,7 @@ func TestParseFormValues_Array(t *testing.T) {
 }
 
 // Here for completeness, but this kind of input is to a large degree nonsense
-// and hopefully not present anywhere in the Stripe API ...
+// and hopefully not present anywhere in APIs ...
 func TestParseFormValues_ArrayMulti(t *testing.T) {
 	assert.Equal(t, map[string]interface{}{
 		"arr": []interface{}{

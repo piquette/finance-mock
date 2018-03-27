@@ -15,6 +15,9 @@ const invalidRoute = "Unrecognized request URL (%s: %s)."
 
 var pathParameterPattern = regexp.MustCompile(`\{(\w+)\}`)
 
+// Version is the mock server version number.
+var Version string
+
 // StubServer handles incoming HTTP requests and responds to them appropriately
 // based off the set of routes that it's been configured with.
 type StubServer struct {
@@ -196,6 +199,8 @@ func writeResponse(w http.ResponseWriter, r *http.Request, start time.Time, stat
 		writeResponse(w, r, start, http.StatusInternalServerError, nil)
 		return
 	}
+
+	w.Header().Set("Finance-Mock-Version", Version)
 
 	w.WriteHeader(status)
 	_, err = w.Write(encodedData)
