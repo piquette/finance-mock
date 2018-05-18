@@ -10,8 +10,10 @@ services:
 
 before_install:
   - go get -u github.com/golang/lint/golint
+  - go get -u github.com/jteeuwen/go-bindata/...
 
 script:
+  - go generate
   - make test
   - make vet
 

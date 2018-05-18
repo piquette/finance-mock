@@ -1,3 +1,5 @@
+//go:generate go-bindata fixture/resources.json fixture/spec.yml
+
 package main
 
 import (
