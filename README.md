@@ -1,4 +1,4 @@
-# finance-mock
+# finance-mock [![Build Status](https://travis-ci.org/piquette/finance-mock.svg?branch=master)](https://travis-ci.org/piquette/finance-mock)
 
 finance-mock is a mock HTTP server that can be used in lieu of various remote financial data sources. The primary purpose of this server is for building test suites for piquette/finance-go that don't have to interact with the real financial data sources, making testing quicker and less prone to unpredictable upstream api errors/changes out of our control.
 
@@ -40,7 +40,7 @@ docker run -p 12111:12111 finance-mock
 Then from another terminal:
 
 ``` sh
-curl -i http://localhost:12111/v7/finance/quote\?symbols\=GE
+curl -i http://localhost:12111/v7/finance/quote\?symbols\=AAPL
 ```
 
 By default, finance-mock runs on port 12111, but is configurable with the
@@ -80,6 +80,5 @@ Homebrew tap).
 goreleaser --rm-dist
 ```
 
-[go-bindata]: https://github.com/jteeuwen/go-bindata
 [goreleaser]: https://github.com/goreleaser/goreleaser
 [releases]: https://github.com/piquette/finance-mock/releases

@@ -1,34 +1,51 @@
 package fixture
 
-type HTTPVerb string
+const (
+	// YFinQuotes are the yfin quote responses.
+	YFinQuotes ResourceID = "quote"
+	// YFinQuotePath is the yfin basic quote path.
+	YFinQuotePath Path = "/v7/finance/quote"
 
-type ResourceID string
+	// ServiceYFin is the yfin service.
+	ServiceYFin ServiceID = "yfin"
+)
 
-type StatusCode string
-
+// Path is a url path.
 type Path string
 
+// ResourceID is just an identifier for a resource.
+type ResourceID string
+
+// ServiceID is just an identifier for a service.
+type ServiceID string
+
+// Resources alias for resource map.
+type Resources map[ResourceID]interface{}
+
+// Fixtures is a collection of resources.
 type Fixtures struct {
-	Resources map[ResourceID]interface{} `yaml:"resources"`
+	Resources map[ServiceID]Resources `json:"resources"`
 }
 
+// Spec specification of services.
 type Spec struct {
-	Paths map[Path]map[HTTPVerb]*Operation `yaml:"paths"`
+	Services map[ServiceID]*Service `yaml:"services"`
 }
 
+// Service is a collection of url paths and resources.
+type Service struct {
+	Paths map[Path]*Operation `yaml:"paths"`
+}
+
+// Operation defines a service operation.
 type Operation struct {
-	Description string                  `yaml:"description"`
-	OperationID string                  `yaml:"operation_id"`
-	Parameters  []*Parameter            `yaml:"parameters"`
-	Responses   map[StatusCode]Response `yaml:"responses"`
+	Parameters []*Parameter `yaml:"parameters"`
+	ResourceID ResourceID   `yaml:"resource"`
 }
 
+// Parameter describes a url parameter.
 type Parameter struct {
 	Description string `yaml:"description"`
 	Name        string `yaml:"name"`
 	Required    bool   `yaml:"required"`
-}
-
-type Response struct {
-	Content map[string]ResourceID `yaml:"content"`
 }

@@ -66,8 +66,9 @@ func main() {
 	}
 
 	// Stub server.
-	stub := server.StubServer{Fixtures: fixtures, Spec: spec, Verbose: verbose}
+	stub := server.StubServer{Fixtures: fixtures, Spec: spec}
 	server.Version = version
+	server.Verbose = verbose
 
 	// Initialize server router.
 	err = stub.InitRouter()
@@ -77,7 +78,8 @@ func main() {
 
 	// Set handler.
 	http.HandleFunc("/", stub.HandleRequest)
-	s := http.Server{}
+	http.HandleFunc("/config/", stub.HandleConfigRequest)
+	// s := http.Server{}
 
 	// Init listener.
 	listener, err := getListener(port, unix)
@@ -86,7 +88,12 @@ func main() {
 	}
 
 	// Serve.
-	s.Serve(listener)
+	err = http.Serve(listener, nil)
+	if err != nil {
+		abort(err.Error())
+	}
+
+	// s.Serve(listener)
 }
 
 func abort(message string) {
@@ -140,14 +147,14 @@ func getSpec(specPath string) (*fixture.Spec, error) {
 
 	data, err = ioutil.ReadFile(specPath)
 	if err != nil {
-		return nil, fmt.Errorf("Error loading spec: %v\n", err)
+		return nil, fmt.Errorf("error loading spec: %v\n", err)
 	}
 
 	var spec fixture.Spec
 
 	err = yaml.Unmarshal(data, &spec)
 	if err != nil {
-		return nil, fmt.Errorf("Error decoding spec: %v\n", err)
+		return nil, fmt.Errorf("error decoding spec: %v\n", err)
 	}
 
 	return &spec, nil

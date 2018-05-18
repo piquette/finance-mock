@@ -1,2109 +1,255 @@
 {
-    "resources": {
-        "quote": {
-            "quoteResponse": {
-                "result": [{
-                        "language": "en-US",
-                        "quoteType": "EQUITY",
-                        "quoteSourceName": "Delayed Quote",
-                        "currency": "USD",
-                        "regularMarketVolume": 32207081,
-                        "market": "us_market",
-                        "averageDailyVolume3Month": 35553866,
-                        "averageDailyVolume10Day": 29697783,
-                        "fiftyTwoWeekLowChange": 43.100006,
-                        "fiftyTwoWeekLowChangePercent": 0.310922,
-                        "fiftyTwoWeekRange": "138.62 - 182.39",
-                        "fiftyTwoWeekHighChange": -0.66999817,
-                        "fiftyTwoWeekHighChangePercent": -0.003673437,
-                        "fiftyTwoWeekLow": 138.62,
-                        "fiftyTwoWeekHigh": 182.39,
-                        "dividendDate": 1518652800,
-                        "earningsTimestamp": 1517518800,
-                        "earningsTimestampStart": 1525118400,
-                        "earningsTimestampEnd": 1525464000,
-                        "trailingAnnualDividendRate": 2.46,
-                        "trailingPE": 18.73402,
-                        "postMarketChangePercent": 0.09354951,
-                        "postMarketTime": 1520899185,
-                        "postMarketPrice": 181.89,
-                        "postMarketChange": 0.16999817,
-                        "regularMarketChangePercent": 0.9667772,
-                        "regularMarketDayRange": "180.21 - 182.39",
-                        "regularMarketPreviousClose": 179.98,
-                        "bid": 181.8,
-                        "ask": 181.9,
-                        "bidSize": 11,
-                        "askSize": 1,
-                        "messageBoardId": "finmb_24937",
-                        "fullExchangeName": "NasdaqGS",
-                        "longName": "Apple Inc.",
-                        "regularMarketPrice": 181.72,
-                        "regularMarketTime": 1520884800,
-                        "regularMarketChange": 1.7400055,
-                        "regularMarketOpen": 180.29,
-                        "regularMarketDayHigh": 182.39,
-                        "regularMarketDayLow": 180.21,
-                        "priceToBook": 6.586683,
-                        "exchange": "NMS",
-                        "priceHint": 2,
-                        "exchangeDataDelayedBy": 0,
-                        "shortName": "Apple Inc.",
-                        "marketState": "POSTPOST",
-                        "financialCurrency": "USD",
-                        "trailingAnnualDividendYield": 0.013668186,
-                        "epsTrailingTwelveMonths": 9.7,
-                        "epsForward": 13.21,
-                        "sourceInterval": 15,
-                        "exchangeTimezoneName": "America/New_York",
-                        "sharesOutstanding": 5074010112,
-                        "bookValue": 27.589,
-                        "fiftyDayAverage": 170.44206,
-                        "fiftyDayAverageChange": 11.277939,
-                        "fiftyDayAverageChangePercent": 0.066168755,
-                        "twoHundredDayAverage": 167.12698,
-                        "twoHundredDayAverageChange": 14.593018,
-                        "twoHundredDayAverageChangePercent": 0.087316945,
-                        "marketCap": 922049118208,
-                        "forwardPE": 13.756246,
-                        "exchangeTimezoneShortName": "EDT",
-                        "gmtOffSetMilliseconds": -14400000,
-                        "esgPopulated": false,
-                        "tradeable": true,
-                        "symbol": "AAPL"
-                    },
-                    {
-                        "language": "en-US",
-                        "quoteType": "EQUITY",
-                        "quoteSourceName": "Delayed Quote",
-                        "currency": "USD",
-                        "regularMarketVolume": 70226636,
-                        "market": "us_market",
-                        "averageDailyVolume3Month": 89450868,
-                        "averageDailyVolume10Day": 69489433,
-                        "fiftyTwoWeekLowChange": 1.1500006,
-                        "fiftyTwoWeekLowChangePercent": 0.08243732,
-                        "fiftyTwoWeekRange": "13.95 - 30.54",
-                        "fiftyTwoWeekHighChange": -15.440001,
-                        "fiftyTwoWeekHighChangePercent": -0.5055665,
-                        "fiftyTwoWeekLow": 13.95,
-                        "fiftyTwoWeekHigh": 30.54,
-                        "dividendDate": 1524614400,
-                        "earningsTimestamp": 1524227400,
-                        "earningsTimestampStart": 1524141000,
-                        "earningsTimestampEnd": 1524486600,
-                        "trailingAnnualDividendRate": 0.84,
-                        "postMarketChangePercent": 0.39734745,
-                        "postMarketTime": 1520899186,
-                        "postMarketPrice": 15.16,
-                        "postMarketChange": 0.059999466,
-                        "regularMarketChangePercent": 1.0709559,
-                        "regularMarketDayRange": "14.96 - 15.33",
-                        "regularMarketPreviousClose": 14.94,
-                        "bid": 0,
-                        "ask": 0,
-                        "bidSize": 0,
-                        "askSize": 0,
-                        "messageBoardId": "finmb_177031",
-                        "fullExchangeName": "NYSE",
-                        "longName": "General Electric Company",
-                        "regularMarketPrice": 15.1,
-                        "regularMarketTime": 1520884803,
-                        "regularMarketChange": 0.1600008,
-                        "regularMarketOpen": 15.02,
-                        "regularMarketDayHigh": 15.33,
-                        "regularMarketDayLow": 14.96,
-                        "priceToBook": 2.0399892,
-                        "exchange": "NYQ",
-                        "priceHint": 2,
-                        "exchangeDataDelayedBy": 0,
-                        "shortName": "General Electric Company",
-                        "marketState": "POSTPOST",
-                        "financialCurrency": "USD",
-                        "trailingAnnualDividendYield": 0.0562249,
-                        "epsTrailingTwelveMonths": -0.719,
-                        "epsForward": 1.06,
-                        "sourceInterval": 15,
-                        "exchangeTimezoneName": "America/New_York",
-                        "sharesOutstanding": 8682579968,
-                        "bookValue": 7.402,
-                        "fiftyDayAverage": 15.110294,
-                        "fiftyDayAverageChange": -0.010293961,
-                        "fiftyDayAverageChangePercent": -0.0006812548,
-                        "twoHundredDayAverage": 19.4025,
-                        "twoHundredDayAverageChange": -4.3025,
-                        "twoHundredDayAverageChangePercent": -0.22174977,
-                        "marketCap": 131106963456,
-                        "forwardPE": 14.245284,
-                        "exchangeTimezoneShortName": "EDT",
-                        "gmtOffSetMilliseconds": -14400000,
-                        "esgPopulated": false,
-                        "tradeable": true,
-                        "symbol": "GE"
-                    }
-                ],
-                "error": null
-            }
+  "resources": {
+    "yfin": {
+      "quote": {
+        "AAPL": {
+          "PRE": {
+            "language": "en-US",
+            "quoteType": "EQUITY",
+            "quoteSourceName": "Nasdaq Real Time Price",
+            "currency": "USD",
+            "esgPopulated": false,
+            "tradeable": true,
+            "exchangeDataDelayedBy": 0,
+            "regularMarketPrice": 190.04,
+            "regularMarketTime": 1525982402,
+            "regularMarketChange": 2.6799927,
+            "regularMarketOpen": 187.74,
+            "regularMarketDayHigh": 190.37,
+            "regularMarketDayLow": 187.65,
+            "regularMarketVolume": 27852594,
+            "market": "us_market",
+            "regularMarketPreviousClose": 187.36,
+            "bid": 189.37,
+            "ask": 189.44,
+            "bidSize": 1,
+            "askSize": 1,
+            "messageBoardId": "finmb_24937",
+            "fullExchangeName": "NasdaqGS",
+            "longName": "Apple Inc.",
+            "financialCurrency": "USD",
+            "averageDailyVolume3Month": 35300301,
+            "averageDailyVolume10Day": 41540125,
+            "fiftyTwoWeekLowChange": 47.839996,
+            "fiftyTwoWeekLowChangePercent": 0.33642754,
+            "fiftyTwoWeekRange": "142.2 - 190.37",
+            "fiftyTwoWeekHighChange": -0.33000183,
+            "fiftyTwoWeekHighChangePercent": -0.0017334761,
+            "fiftyTwoWeekLow": 142.2,
+            "fiftyTwoWeekHigh": 190.37,
+            "dividendDate": 1526515200,
+            "earningsTimestamp": 1525204800,
+            "earningsTimestampStart": 1525118400,
+            "earningsTimestampEnd": 1525464000,
+            "trailingAnnualDividendRate": 2.52,
+            "trailingPE": 18.380888,
+            "trailingAnnualDividendYield": 0.013450042,
+            "marketState": "PRE",
+            "exchange": "NMS",
+            "preMarketChange": -0.6499939,
+            "preMarketChangePercent": -0.34203005,
+            "preMarketTime": 1526044600,
+            "preMarketPrice": 189.39,
+            "regularMarketChangePercent": 1.4303975,
+            "regularMarketDayRange": "187.65 - 190.37",
+            "epsTrailingTwelveMonths": 10.339,
+            "epsForward": 13.25,
+            "sharesOutstanding": 4915140096,
+            "bookValue": 25.667,
+            "fiftyDayAverage": 172.30515,
+            "fiftyDayAverageChange": 17.734848,
+            "fiftyDayAverageChangePercent": 0.10292698,
+            "twoHundredDayAverage": 171.8076,
+            "twoHundredDayAverageChange": 18.232391,
+            "priceToBook": 7.4040594,
+            "sourceInterval": 15,
+            "exchangeTimezoneName": "America/New_York",
+            "exchangeTimezoneShortName": "EDT",
+            "gmtOffSetMilliseconds": -14400000,
+            "twoHundredDayAverageChangePercent": 0.10612098,
+            "marketCap": 934073204736,
+            "forwardPE": 14.342641,
+            "priceHint": 2,
+            "shortName": "Apple Inc.",
+            "symbol": "AAPL"
+          },
+          "REGULAR": {
+            "language": "en-US",
+            "quoteType": "EQUITY",
+            "quoteSourceName": "Nasdaq Real Time Price",
+            "currency": "USD",
+            "market": "us_market",
+            "marketState": "REGULAR",
+            "epsTrailingTwelveMonths": 10.339,
+            "epsForward": 13.25,
+            "sharesOutstanding": 4915140096,
+            "bookValue": 25.667,
+            "fiftyDayAverage": 172.30515,
+            "fiftyDayAverageChange": 16.464859,
+            "fiftyDayAverageChangePercent": 0.0955564,
+            "twoHundredDayAverage": 171.8076,
+            "twoHundredDayAverageChange": 16.962402,
+            "twoHundredDayAverageChangePercent": 0.09872906,
+            "marketCap": 927831031808,
+            "forwardPE": 14.246793,
+            "priceToBook": 7.35458,
+            "sourceInterval": 15,
+            "exchangeTimezoneName": "America/New_York",
+            "exchangeTimezoneShortName": "EDT",
+            "gmtOffSetMilliseconds": -14400000,
+            "exchange": "NMS",
+            "exchangeDataDelayedBy": 0,
+            "priceHint": 2,
+            "esgPopulated": false,
+            "tradeable": true,
+            "regularMarketChangePercent": -0.28524286,
+            "regularMarketDayRange": "188.25 - 190.06",
+            "regularMarketPreviousClose": 189.31,
+            "bid": 188.64,
+            "ask": 188.65,
+            "bidSize": 1,
+            "askSize": 11,
+            "messageBoardId": "finmb_24937",
+            "fullExchangeName": "NasdaqGS",
+            "averageDailyVolume3Month": 35300301,
+            "averageDailyVolume10Day": 41540125,
+            "fiftyTwoWeekLowChange": 46.570007,
+            "fiftyTwoWeekLowChangePercent": 0.32749653,
+            "fiftyTwoWeekRange": "142.2 - 190.37",
+            "fiftyTwoWeekHighChange": -1.5999908,
+            "fiftyTwoWeekHighChangePercent": -0.008404638,
+            "fiftyTwoWeekLow": 142.2,
+            "fiftyTwoWeekHigh": 190.37,
+            "dividendDate": 1526515200,
+            "earningsTimestamp": 1525204800,
+            "earningsTimestampStart": 1525118400,
+            "earningsTimestampEnd": 1525464000,
+            "trailingAnnualDividendRate": 2.52,
+            "trailingPE": 18.258053,
+            "trailingAnnualDividendYield": 0.0133115,
+            "longName": "Apple Inc.",
+            "financialCurrency": "USD",
+            "shortName": "Apple Inc.",
+            "regularMarketPrice": 188.77,
+            "regularMarketTime": 1526060247,
+            "regularMarketChange": -0.5399933,
+            "regularMarketOpen": 189.49,
+            "regularMarketDayHigh": 190.06,
+            "regularMarketDayLow": 188.25,
+            "regularMarketVolume": 14524940,
+            "symbol": "AAPL"
+          },
+          "POST": {
+            "language": "en-US",
+            "quoteType": "EQUITY",
+            "quoteSourceName": "Nasdaq Real Time Price",
+            "currency": "USD",
+            "regularMarketPrice": 188.59,
+            "regularMarketTime": 1526068801,
+            "regularMarketChange": -0.7200012,
+            "regularMarketOpen": 189.49,
+            "regularMarketDayHigh": 190.06,
+            "regularMarketDayLow": 187.45,
+            "regularMarketVolume": 25703803,
+            "shortName": "Apple Inc.",
+            "market": "us_market",
+            "fiftyDayAverageChangePercent": 0.094511695,
+            "twoHundredDayAverage": 171.8076,
+            "twoHundredDayAverageChange": 16.782394,
+            "twoHundredDayAverageChangePercent": 0.09768133,
+            "marketCap": 926946230272,
+            "forwardPE": 14.233208,
+            "priceToBook": 7.3475666,
+            "sourceInterval": 15,
+            "exchangeTimezoneName": "America/New_York",
+            "exchangeTimezoneShortName": "EDT",
+            "gmtOffSetMilliseconds": -14400000,
+            "priceHint": 2,
+            "epsTrailingTwelveMonths": 10.339,
+            "sharesOutstanding": 4915140096,
+            "bookValue": 25.667,
+            "fiftyDayAverage": 172.30515,
+            "fiftyDayAverageChange": 16.284851,
+            "esgPopulated": false,
+            "tradeable": true,
+            "postMarketPrice": 188.59,
+            "postMarketChange": 0,
+            "regularMarketChangePercent": -0.3803292,
+            "regularMarketDayRange": "187.45 - 190.06",
+            "regularMarketPreviousClose": 189.31,
+            "bid": 188.5,
+            "ask": 188.59,
+            "bidSize": 26,
+            "askSize": 1,
+            "messageBoardId": "finmb_24937",
+            "fullExchangeName": "NasdaqGS",
+            "longName": "Apple Inc.",
+            "financialCurrency": "USD",
+            "averageDailyVolume3Month": 35300301,
+            "averageDailyVolume10Day": 41540125,
+            "fiftyTwoWeekLowChange": 46.39,
+            "fiftyTwoWeekLowChangePercent": 0.32623067,
+            "fiftyTwoWeekRange": "142.2 - 190.37",
+            "fiftyTwoWeekHighChange": -1.7799988,
+            "fiftyTwoWeekHighChangePercent": -0.009350207,
+            "fiftyTwoWeekLow": 142.2,
+            "fiftyTwoWeekHigh": 190.37,
+            "dividendDate": 1526515200,
+            "earningsTimestamp": 1525204800,
+            "earningsTimestampStart": 1525118400,
+            "earningsTimestampEnd": 1525464000,
+            "trailingAnnualDividendRate": 2.52,
+            "trailingPE": 18.240643,
+            "trailingAnnualDividendYield": 0.0133115,
+            "epsForward": 13.25,
+            "exchange": "NMS",
+            "postMarketChangePercent": 0,
+            "postMarketTime": 1526070161,
+            "marketState": "POST",
+            "exchangeDataDelayedBy": 0,
+            "symbol": "AAPL"
+          }
         },
-        "history": {
-            "chart": {
-                "result": [{
-                    "meta": {
-                        "currency": "USD",
-                        "symbol": "AAPL",
-                        "exchangeName": "NMS",
-                        "instrumentType": "EQUITY",
-                        "firstTradeDate": 345459600,
-                        "gmtoffset": -14400,
-                        "timezone": "EDT",
-                        "exchangeTimezoneName": "America/New_York",
-                        "chartPreviousClose": 176.82,
-                        "currentTradingPeriod": {
-                            "pre": {
-                                "timezone": "EDT",
-                                "end": 1520861400,
-                                "start": 1520841600,
-                                "gmtoffset": -14400
-                            },
-                            "regular": {
-                                "timezone": "EDT",
-                                "end": 1520884800,
-                                "start": 1520861400,
-                                "gmtoffset": -14400
-                            },
-                            "post": {
-                                "timezone": "EDT",
-                                "end": 1520899200,
-                                "start": 1520884800,
-                                "gmtoffset": -14400
-                            }
-                        },
-                        "dataGranularity": "1d",
-                        "validRanges": [
-                            "1d",
-                            "5d",
-                            "1mo",
-                            "3mo",
-                            "6mo",
-                            "1y",
-                            "2y",
-                            "5y",
-                            "10y",
-                            "ytd",
-                            "max"
-                        ]
-                    },
-                    "timestamp": [
-                        1520346600,
-                        1520433000,
-                        1520519400,
-                        1520605800,
-                        1520861400
-                    ],
-                    "indicators": {
-                        "quote": [{
-                            "volume": [
-                                23788500,
-                                31703500,
-                                23774100,
-                                32185200,
-                                32162900
-                            ],
-                            "open": [
-                                177.91000366210938,
-                                174.94000244140625,
-                                175.47999572753906,
-                                177.9600067138672,
-                                180.2899932861328
-                            ],
-                            "high": [
-                                178.25,
-                                175.85000610351562,
-                                177.1199951171875,
-                                180,
-                                182.38999938964844
-                            ],
-                            "close": [
-                                176.6699981689453,
-                                175.02999877929688,
-                                176.94000244140625,
-                                179.97999572753906,
-                                181.72000122070312
-                            ],
-                            "low": [
-                                176.1300048828125,
-                                174.27000427246094,
-                                175.07000732421875,
-                                177.38999938964844,
-                                180.2100067138672
-                            ]
-                        }],
-                        "unadjclose": [{
-                            "unadjclose": [
-                                176.6699981689453,
-                                175.02999877929688,
-                                176.94000244140625,
-                                179.97999572753906,
-                                181.72000122070312
-                            ]
-                        }],
-                        "adjclose": [{
-                            "adjclose": [
-                                176.6699981689453,
-                                175.02999877929688,
-                                176.94000244140625,
-                                179.97999572753906,
-                                181.72000122070312
-                            ]
-                        }]
-                    }
-                }],
-                "error": null
-            }
+        "SPY": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
         },
-        "options": {
-            "optionChain": {
-                "result": [{
-                    "underlyingSymbol": "VB",
-                    "expirationDates": [
-                        1521158400,
-                        1524182400,
-                        1529020800,
-                        1537488000
-                    ],
-                    "strikes": [
-                        126,
-                        130,
-                        132,
-                        133,
-                        135,
-                        137,
-                        139,
-                        140,
-                        141,
-                        142,
-                        143,
-                        144,
-                        145,
-                        146,
-                        147,
-                        148,
-                        149,
-                        150,
-                        151,
-                        152,
-                        154,
-                        155,
-                        158
-                    ],
-                    "hasMiniOptions": false,
-                    "quote": {
-                        "language": "en-US",
-                        "quoteType": "ETF",
-                        "quoteSourceName": "Delayed Quote",
-                        "currency": "USD",
-                        "sharesOutstanding": 137608992,
-                        "fiftyDayAverage": 148.73236,
-                        "fiftyDayAverageChange": 4.3676453,
-                        "sourceInterval": 15,
-                        "exchangeTimezoneName": "America/New_York",
-                        "exchangeTimezoneShortName": "EDT",
-                        "shortName": "VANGUARD INDEX FDS VANGUARD SMA",
-                        "ytdReturn": -1.33,
-                        "trailingThreeMonthReturns": -0.93,
-                        "trailingThreeMonthNavReturns": -0.95,
-                        "postMarketPrice": 153.02,
-                        "postMarketChange": -0.08000183,
-                        "regularMarketChangePercent": 0.1439045,
-                        "regularMarketDayRange": "152.31 - 153.52",
-                        "regularMarketPreviousClose": 152.88,
-                        "bid": 0,
-                        "ask": 0,
-                        "bidSize": 0,
-                        "askSize": 0,
-                        "messageBoardId": "finmb_22939707",
-                        "fullExchangeName": "NYSEArca",
-                        "longName": "Vanguard Small-Cap ETF",
-                        "financialCurrency": "USD",
-                        "averageDailyVolume3Month": 631155,
-                        "averageDailyVolume10Day": 733550,
-                        "fiftyTwoWeekLowChange": 24.290009,
-                        "fiftyTwoWeekLowChangePercent": 0.18857239,
-                        "fiftyTwoWeekRange": "128.81 - 155.86",
-                        "fiftyTwoWeekHighChange": -2.7599945,
-                        "fiftyTwoWeekHighChangePercent": -0.017708164,
-                        "fiftyTwoWeekLow": 128.81,
-                        "fiftyTwoWeekHigh": 155.86,
-                        "regularMarketPrice": 153.1,
-                        "regularMarketTime": 1520884800,
-                        "regularMarketChange": 0.22000122,
-                        "regularMarketOpen": 153.08,
-                        "regularMarketDayHigh": 153.52,
-                        "regularMarketDayLow": 152.31,
-                        "regularMarketVolume": 290748,
-                        "gmtOffSetMilliseconds": -14400000,
-                        "esgPopulated": false,
-                        "tradeable": true,
-                        "priceHint": 2,
-                        "marketState": "POSTPOST",
-                        "twoHundredDayAverageChange": 8.300079,
-                        "twoHundredDayAverageChangePercent": 0.05732102,
-                        "exchangeDataDelayedBy": 0,
-                        "fiftyDayAverageChangePercent": 0.029365804,
-                        "twoHundredDayAverage": 144.79993,
-                        "marketCap": 137483812864,
-                        "exchange": "PCX",
-                        "market": "us_market",
-                        "postMarketChangePercent": -0.052254625,
-                        "postMarketTime": 1520889383,
-                        "symbol": "VB"
-                    },
-                    "options": [{
-                        "expirationDate": 1521158400,
-                        "hasMiniOptions": false,
-                        "calls": [{
-                                "percentChange": {
-                                    "raw": 29.596415,
-                                    "fmt": "29.60%"
-                                },
-                                "openInterest": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "change": {
-                                    "raw": 6.6000004,
-                                    "fmt": "6.60"
-                                },
-                                "strike": {
-                                    "raw": 126,
-                                    "fmt": "126.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 1.861328818359375,
-                                    "fmt": "186.13%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 30.2,
-                                    "fmt": "30.20"
-                                },
-                                "contractSymbol": "VB180316C00126000",
-                                "lastTradeDate": {
-                                    "raw": 1516991177,
-                                    "fmt": "2018-01-26",
-                                    "longFmt": "2018-01-26T18:26"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 28.5,
-                                    "fmt": "28.50"
-                                },
-                                "lastPrice": {
-                                    "raw": 28.9,
-                                    "fmt": "28.90"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 171.72284,
-                                    "fmt": "171.72%"
-                                },
-                                "openInterest": {
-                                    "raw": 12,
-                                    "fmt": "12",
-                                    "longFmt": "12"
-                                },
-                                "change": {
-                                    "raw": 9.17,
-                                    "fmt": "9.17"
-                                },
-                                "strike": {
-                                    "raw": 132,
-                                    "fmt": "132.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 11,
-                                    "fmt": "11",
-                                    "longFmt": "11"
-                                },
-                                "ask": {
-                                    "raw": 16.1,
-                                    "fmt": "16.10"
-                                },
-                                "contractSymbol": "VB180316C00132000",
-                                "lastTradeDate": {
-                                    "raw": 1511540336,
-                                    "fmt": "2017-11-24",
-                                    "longFmt": "2017-11-24T16:18"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 13.2,
-                                    "fmt": "13.20"
-                                },
-                                "lastPrice": {
-                                    "raw": 14.51,
-                                    "fmt": "14.51"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 4,
-                                    "fmt": "4",
-                                    "longFmt": "4"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 133,
-                                    "fmt": "133.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 13.7,
-                                    "fmt": "13.70"
-                                },
-                                "contractSymbol": "VB180316C00133000",
-                                "lastTradeDate": {
-                                    "raw": 1507318224,
-                                    "fmt": "2017-10-06",
-                                    "longFmt": "2017-10-06T19:30"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 11.9,
-                                    "fmt": "11.90"
-                                },
-                                "lastPrice": {
-                                    "raw": 12.1,
-                                    "fmt": "12.10"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 11,
-                                    "fmt": "11",
-                                    "longFmt": "11"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 135,
-                                    "fmt": "135.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 14.6,
-                                    "fmt": "14.60"
-                                },
-                                "contractSymbol": "VB180316C00135000",
-                                "lastTradeDate": {
-                                    "raw": 1518195586,
-                                    "fmt": "2018-02-09",
-                                    "longFmt": "2018-02-09T16:59"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 13.4,
-                                    "fmt": "13.40"
-                                },
-                                "lastPrice": {
-                                    "raw": 7,
-                                    "fmt": "7.00"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 20,
-                                    "fmt": "20",
-                                    "longFmt": "20"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 137,
-                                    "fmt": "137.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 10,
-                                    "fmt": "10.00"
-                                },
-                                "contractSymbol": "VB180316C00137000",
-                                "lastTradeDate": {
-                                    "raw": 1518025868,
-                                    "fmt": "2018-02-07",
-                                    "longFmt": "2018-02-07T17:51"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 5.3,
-                                    "fmt": "5.30"
-                                },
-                                "lastPrice": {
-                                    "raw": 10,
-                                    "fmt": "10.00"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 37,
-                                    "fmt": "37",
-                                    "longFmt": "37"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 140,
-                                    "fmt": "140.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 20,
-                                    "fmt": "20",
-                                    "longFmt": "20"
-                                },
-                                "ask": {
-                                    "raw": 8.1,
-                                    "fmt": "8.10"
-                                },
-                                "contractSymbol": "VB180316C00140000",
-                                "lastTradeDate": {
-                                    "raw": 1519837930,
-                                    "fmt": "2018-02-28",
-                                    "longFmt": "2018-02-28T17:12"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 6.8,
-                                    "fmt": "6.80"
-                                },
-                                "lastPrice": {
-                                    "raw": 8,
-                                    "fmt": "8.00"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 5,
-                                    "fmt": "5",
-                                    "longFmt": "5"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 141,
-                                    "fmt": "141.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 5,
-                                    "fmt": "5",
-                                    "longFmt": "5"
-                                },
-                                "ask": {
-                                    "raw": 10.3,
-                                    "fmt": "10.30"
-                                },
-                                "contractSymbol": "VB180316C00141000",
-                                "lastTradeDate": {
-                                    "raw": 1517415504,
-                                    "fmt": "2018-01-31",
-                                    "longFmt": "2018-01-31T16:18"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 8.8,
-                                    "fmt": "8.80"
-                                },
-                                "lastPrice": {
-                                    "raw": 13.1,
-                                    "fmt": "13.10"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 9,
-                                    "fmt": "9",
-                                    "longFmt": "9"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 142,
-                                    "fmt": "142.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 5.5,
-                                    "fmt": "5.50"
-                                },
-                                "contractSymbol": "VB180316C00142000",
-                                "lastTradeDate": {
-                                    "raw": 1510259428,
-                                    "fmt": "2017-11-09",
-                                    "longFmt": "2017-11-09T20:30"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 4.3,
-                                    "fmt": "4.30"
-                                },
-                                "lastPrice": {
-                                    "raw": 4.6,
-                                    "fmt": "4.60"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 304.00003,
-                                    "fmt": "304.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 6,
-                                    "fmt": "6",
-                                    "longFmt": "6"
-                                },
-                                "change": {
-                                    "raw": 7.6000004,
-                                    "fmt": "7.60"
-                                },
-                                "strike": {
-                                    "raw": 143,
-                                    "fmt": "143.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.64062859375,
-                                    "fmt": "64.06%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 10.9,
-                                    "fmt": "10.90"
-                                },
-                                "contractSymbol": "VB180316C00143000",
-                                "lastTradeDate": {
-                                    "raw": 1520864563,
-                                    "fmt": "2018-03-12",
-                                    "longFmt": "2018-03-12T14:22"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 9.5,
-                                    "fmt": "9.50"
-                                },
-                                "lastPrice": {
-                                    "raw": 10.1,
-                                    "fmt": "10.10"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 6,
-                                    "fmt": "6",
-                                    "longFmt": "6"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 144,
-                                    "fmt": "144.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 6,
-                                    "fmt": "6",
-                                    "longFmt": "6"
-                                },
-                                "ask": {
-                                    "raw": 5.6,
-                                    "fmt": "5.60"
-                                },
-                                "contractSymbol": "VB180316C00144000",
-                                "lastTradeDate": {
-                                    "raw": 1511545808,
-                                    "fmt": "2017-11-24",
-                                    "longFmt": "2017-11-24T17:50"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 4.2,
-                                    "fmt": "4.20"
-                                },
-                                "lastPrice": {
-                                    "raw": 3.2,
-                                    "fmt": "3.20"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 590,
-                                    "fmt": "590.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 9,
-                                    "fmt": "9",
-                                    "longFmt": "9"
-                                },
-                                "change": {
-                                    "raw": 6.4900002,
-                                    "fmt": "6.49"
-                                },
-                                "strike": {
-                                    "raw": 145,
-                                    "fmt": "145.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.47070841796875,
-                                    "fmt": "47.07%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 8.6,
-                                    "fmt": "8.60"
-                                },
-                                "contractSymbol": "VB180316C00145000",
-                                "lastTradeDate": {
-                                    "raw": 1520620132,
-                                    "fmt": "2018-03-09",
-                                    "longFmt": "2018-03-09T18:28"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 7.1,
-                                    "fmt": "7.10"
-                                },
-                                "lastPrice": {
-                                    "raw": 7.59,
-                                    "fmt": "7.59"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 146,
-                                    "fmt": "146.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.428716650390625,
-                                    "fmt": "42.87%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 7.6,
-                                    "fmt": "7.60"
-                                },
-                                "contractSymbol": "VB180316C00146000",
-                                "lastTradeDate": {
-                                    "raw": 1520521923,
-                                    "fmt": "2018-03-08",
-                                    "longFmt": "2018-03-08T15:12"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 6.1,
-                                    "fmt": "6.10"
-                                },
-                                "lastPrice": {
-                                    "raw": 4.99,
-                                    "fmt": "4.99"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": -71.830986,
-                                    "fmt": "-71.83%"
-                                },
-                                "openInterest": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "change": {
-                                    "raw": -2.04,
-                                    "fmt": "-2.04"
-                                },
-                                "strike": {
-                                    "raw": 147,
-                                    "fmt": "147.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 5,
-                                    "fmt": "5",
-                                    "longFmt": "5"
-                                },
-                                "ask": {
-                                    "raw": 2.15,
-                                    "fmt": "2.15"
-                                },
-                                "contractSymbol": "VB180316C00147000",
-                                "lastTradeDate": {
-                                    "raw": 1520007100,
-                                    "fmt": "2018-03-02",
-                                    "longFmt": "2018-03-02T16:11"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.2,
-                                    "fmt": "1.20"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.8,
-                                    "fmt": "0.80"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 152.63158,
-                                    "fmt": "152.63%"
-                                },
-                                "openInterest": {
-                                    "raw": 20,
-                                    "fmt": "20",
-                                    "longFmt": "20"
-                                },
-                                "change": {
-                                    "raw": 1.45,
-                                    "fmt": "1.45"
-                                },
-                                "strike": {
-                                    "raw": 148,
-                                    "fmt": "148.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "ask": {
-                                    "raw": 3.2,
-                                    "fmt": "3.20"
-                                },
-                                "contractSymbol": "VB180316C00148000",
-                                "lastTradeDate": {
-                                    "raw": 1519663682,
-                                    "fmt": "2018-02-26",
-                                    "longFmt": "2018-02-26T16:48"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 2.2,
-                                    "fmt": "2.20"
-                                },
-                                "lastPrice": {
-                                    "raw": 2.4,
-                                    "fmt": "2.40"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 23.07693,
-                                    "fmt": "23.08%"
-                                },
-                                "openInterest": {
-                                    "raw": 4,
-                                    "fmt": "4",
-                                    "longFmt": "4"
-                                },
-                                "change": {
-                                    "raw": 0.30000007,
-                                    "fmt": "0.30"
-                                },
-                                "strike": {
-                                    "raw": 149,
-                                    "fmt": "149.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 2.4,
-                                    "fmt": "2.40"
-                                },
-                                "contractSymbol": "VB180316C00149000",
-                                "lastTradeDate": {
-                                    "raw": 1519655404,
-                                    "fmt": "2018-02-26",
-                                    "longFmt": "2018-02-26T14:30"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.55,
-                                    "fmt": "1.55"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.6,
-                                    "fmt": "1.60"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 48,
-                                    "fmt": "48.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 41,
-                                    "fmt": "41",
-                                    "longFmt": "41"
-                                },
-                                "change": {
-                                    "raw": 0.72,
-                                    "fmt": "0.72"
-                                },
-                                "strike": {
-                                    "raw": 150,
-                                    "fmt": "150.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.27246821289062495,
-                                    "fmt": "27.25%"
-                                },
-                                "volume": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "ask": {
-                                    "raw": 3.7,
-                                    "fmt": "3.70"
-                                },
-                                "contractSymbol": "VB180316C00150000",
-                                "lastTradeDate": {
-                                    "raw": 1520606113,
-                                    "fmt": "2018-03-09",
-                                    "longFmt": "2018-03-09T14:35"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 2.45,
-                                    "fmt": "2.45"
-                                },
-                                "lastPrice": {
-                                    "raw": 2.22,
-                                    "fmt": "2.22"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": -31.818184,
-                                    "fmt": "-31.82%"
-                                },
-                                "openInterest": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "change": {
-                                    "raw": -0.35000002,
-                                    "fmt": "-0.35"
-                                },
-                                "strike": {
-                                    "raw": 151,
-                                    "fmt": "151.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.000010000000000000003,
-                                    "fmt": "0.00%"
-                                },
-                                "volume": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "ask": {
-                                    "raw": 1.05,
-                                    "fmt": "1.05"
-                                },
-                                "contractSymbol": "VB180316C00151000",
-                                "lastTradeDate": {
-                                    "raw": 1520368299,
-                                    "fmt": "2018-03-06",
-                                    "longFmt": "2018-03-06T20:31"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.35,
-                                    "fmt": "0.35"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.75,
-                                    "fmt": "0.75"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 25.714287,
-                                    "fmt": "25.71%"
-                                },
-                                "openInterest": {
-                                    "raw": 5,
-                                    "fmt": "5",
-                                    "longFmt": "5"
-                                },
-                                "change": {
-                                    "raw": 0.45000005,
-                                    "fmt": "0.45"
-                                },
-                                "strike": {
-                                    "raw": 154,
-                                    "fmt": "154.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.5273484765625001,
-                                    "fmt": "52.73%"
-                                },
-                                "volume": {
-                                    "raw": 5,
-                                    "fmt": "5",
-                                    "longFmt": "5"
-                                },
-                                "ask": {
-                                    "raw": 2.95,
-                                    "fmt": "2.95"
-                                },
-                                "contractSymbol": "VB180316C00154000",
-                                "lastTradeDate": {
-                                    "raw": 1516381575,
-                                    "fmt": "2018-01-19",
-                                    "longFmt": "2018-01-19T17:06"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.95,
-                                    "fmt": "1.95"
-                                },
-                                "lastPrice": {
-                                    "raw": 2.2,
-                                    "fmt": "2.20"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 155,
-                                    "fmt": "155.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.6103554589843752,
-                                    "fmt": "61.04%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 3.6,
-                                    "fmt": "3.60"
-                                },
-                                "contractSymbol": "VB180316C00155000",
-                                "lastTradeDate": {
-                                    "raw": 1517028857,
-                                    "fmt": "2018-01-27",
-                                    "longFmt": "2018-01-27T04:54"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 2.5,
-                                    "fmt": "2.50"
-                                },
-                                "lastPrice": {
-                                    "raw": 2.56,
-                                    "fmt": "2.56"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 500,
-                                    "fmt": "500.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 19,
-                                    "fmt": "19",
-                                    "longFmt": "19"
-                                },
-                                "change": {
-                                    "raw": 0.75,
-                                    "fmt": "0.75"
-                                },
-                                "strike": {
-                                    "raw": 158,
-                                    "fmt": "158.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.39990834472656256,
-                                    "fmt": "39.99%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 0.85,
-                                    "fmt": "0.85"
-                                },
-                                "contractSymbol": "VB180316C00158000",
-                                "lastTradeDate": {
-                                    "raw": 1518807709,
-                                    "fmt": "2018-02-16",
-                                    "longFmt": "2018-02-16T19:01"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.9,
-                                    "fmt": "0.90"
-                                }
-                            }
-                        ],
-                        "puts": [{
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 126,
-                                    "fmt": "126.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 1.5009790576171875,
-                                    "fmt": "150.10%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 1.4,
-                                    "fmt": "1.40"
-                                },
-                                "contractSymbol": "VB180316P00126000",
-                                "lastTradeDate": {
-                                    "raw": 1507572805,
-                                    "fmt": "2017-10-09",
-                                    "longFmt": "2017-10-09T18:13"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.85,
-                                    "fmt": "0.85"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.15,
-                                    "fmt": "1.15"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 130,
-                                    "fmt": "130.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 1.4399442065429686,
-                                    "fmt": "143.99%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 1.7,
-                                    "fmt": "1.70"
-                                },
-                                "contractSymbol": "VB180316P00130000",
-                                "lastTradeDate": {
-                                    "raw": 1504323904,
-                                    "fmt": "2017-09-02",
-                                    "longFmt": "2017-09-02T03:45"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.3,
-                                    "fmt": "1.30"
-                                },
-                                "lastPrice": {
-                                    "raw": 3.6,
-                                    "fmt": "3.60"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 0,
-                                    "fmt": "0",
-                                    "longFmt": "0"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 133,
-                                    "fmt": "133.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 1.4130888720703125,
-                                    "fmt": "141.31%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 2.25,
-                                    "fmt": "2.25"
-                                },
-                                "contractSymbol": "VB180316P00133000",
-                                "lastTradeDate": {
-                                    "raw": 1506452567,
-                                    "fmt": "2017-09-26",
-                                    "longFmt": "2017-09-26T19:02"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.6,
-                                    "fmt": "1.60"
-                                },
-                                "lastPrice": {
-                                    "raw": 3.21,
-                                    "fmt": "3.21"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 139,
-                                    "fmt": "139.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.69336244140625,
-                                    "fmt": "69.34%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 0.8,
-                                    "fmt": "0.80"
-                                },
-                                "contractSymbol": "VB180316P00139000",
-                                "lastTradeDate": {
-                                    "raw": 1517028863,
-                                    "fmt": "2018-01-27",
-                                    "longFmt": "2018-01-27T04:54"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.1,
-                                    "fmt": "0.10"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.55,
-                                    "fmt": "0.55"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": -97.2973,
-                                    "fmt": "-97.30%"
-                                },
-                                "openInterest": {
-                                    "raw": 17,
-                                    "fmt": "17",
-                                    "longFmt": "17"
-                                },
-                                "change": {
-                                    "raw": -3.6000001,
-                                    "fmt": "-3.60"
-                                },
-                                "strike": {
-                                    "raw": 143,
-                                    "fmt": "143.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.43555251953125,
-                                    "fmt": "43.56%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 0.2,
-                                    "fmt": "0.20"
-                                },
-                                "contractSymbol": "VB180316P00143000",
-                                "lastTradeDate": {
-                                    "raw": 1520861883,
-                                    "fmt": "2018-03-12",
-                                    "longFmt": "2018-03-12T13:38"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.1,
-                                    "fmt": "0.10"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 145,
-                                    "fmt": "145.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.6728548339843752,
-                                    "fmt": "67.29%"
-                                },
-                                "volume": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "ask": {
-                                    "raw": 1.8,
-                                    "fmt": "1.80"
-                                },
-                                "contractSymbol": "VB180316P00145000",
-                                "lastTradeDate": {
-                                    "raw": 1519937902,
-                                    "fmt": "2018-03-01",
-                                    "longFmt": "2018-03-01T20:58"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.85,
-                                    "fmt": "0.85"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.9,
-                                    "fmt": "1.90"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 0,
-                                    "fmt": "0",
-                                    "longFmt": "0"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 147,
-                                    "fmt": "147.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.5351608984375,
-                                    "fmt": "53.52%"
-                                },
-                                "volume": {
-                                    "raw": 2,
-                                    "fmt": "2",
-                                    "longFmt": "2"
-                                },
-                                "ask": {
-                                    "raw": 1.15,
-                                    "fmt": "1.15"
-                                },
-                                "contractSymbol": "VB180316P00147000",
-                                "lastTradeDate": {
-                                    "raw": 1520458927,
-                                    "fmt": "2018-03-07",
-                                    "longFmt": "2018-03-07T21:42"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "lastPrice": {
-                                    "raw": 0.2,
-                                    "fmt": "0.20"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 0,
-                                    "fmt": "0",
-                                    "longFmt": "0"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 148,
-                                    "fmt": "148.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.584965087890625,
-                                    "fmt": "58.50%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 2.35,
-                                    "fmt": "2.35"
-                                },
-                                "contractSymbol": "VB180316P00148000",
-                                "lastTradeDate": {
-                                    "raw": 1519319159,
-                                    "fmt": "2018-02-22",
-                                    "longFmt": "2018-02-22T17:05"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1,
-                                    "fmt": "1.00"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.96,
-                                    "fmt": "1.96"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 149,
-                                    "fmt": "149.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.5415084912109377,
-                                    "fmt": "54.15%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 1.75,
-                                    "fmt": "1.75"
-                                },
-                                "contractSymbol": "VB180316P00149000",
-                                "lastTradeDate": {
-                                    "raw": 1516717821,
-                                    "fmt": "2018-01-23",
-                                    "longFmt": "2018-01-23T14:30"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.55,
-                                    "fmt": "0.55"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.43,
-                                    "fmt": "1.43"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 151,
-                                    "fmt": "151.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 1.6582048339843751,
-                                    "fmt": "165.82%"
-                                },
-                                "volume": {
-                                    "raw": 1,
-                                    "fmt": "1",
-                                    "longFmt": "1"
-                                },
-                                "ask": {
-                                    "raw": 12,
-                                    "fmt": "12.00"
-                                },
-                                "contractSymbol": "VB180316P00151000",
-                                "lastTradeDate": {
-                                    "raw": 1516423650,
-                                    "fmt": "2018-01-20",
-                                    "longFmt": "2018-01-20T04:47"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 7,
-                                    "fmt": "7.00"
-                                },
-                                "lastPrice": {
-                                    "raw": 3.1,
-                                    "fmt": "3.10"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 152,
-                                    "fmt": "152.00"
-                                },
-                                "inTheMoney": false,
-                                "impliedVolatility": {
-                                    "raw": 0.4580132324218751,
-                                    "fmt": "45.80%"
-                                },
-                                "volume": {
-                                    "raw": 3,
-                                    "fmt": "3",
-                                    "longFmt": "3"
-                                },
-                                "ask": {
-                                    "raw": 2.4,
-                                    "fmt": "2.40"
-                                },
-                                "contractSymbol": "VB180316P00152000",
-                                "lastTradeDate": {
-                                    "raw": 1517028864,
-                                    "fmt": "2018-01-27",
-                                    "longFmt": "2018-01-27T04:54"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 1.3,
-                                    "fmt": "1.30"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.75,
-                                    "fmt": "1.75"
-                                }
-                            },
-                            {
-                                "percentChange": {
-                                    "raw": 0,
-                                    "fmt": "0.00%"
-                                },
-                                "openInterest": {
-                                    "raw": 0,
-                                    "fmt": "0",
-                                    "longFmt": "0"
-                                },
-                                "change": {
-                                    "raw": 0,
-                                    "fmt": "0.00"
-                                },
-                                "strike": {
-                                    "raw": 154,
-                                    "fmt": "154.00"
-                                },
-                                "inTheMoney": true,
-                                "impliedVolatility": {
-                                    "raw": 0.23511507080078126,
-                                    "fmt": "23.51%"
-                                },
-                                "volume": {
-                                    "raw": 10,
-                                    "fmt": "10",
-                                    "longFmt": "10"
-                                },
-                                "ask": {
-                                    "raw": 2,
-                                    "fmt": "2.00"
-                                },
-                                "contractSymbol": "VB180316P00154000",
-                                "lastTradeDate": {
-                                    "raw": 1520901499,
-                                    "fmt": "2018-03-13",
-                                    "longFmt": "2018-03-13T00:38"
-                                },
-                                "expiration": {
-                                    "raw": 1521158400,
-                                    "fmt": "2018-03-16",
-                                    "longFmt": "2018-03-16T00:00"
-                                },
-                                "currency": "USD",
-                                "contractSize": "REGULAR",
-                                "bid": {
-                                    "raw": 0.65,
-                                    "fmt": "0.65"
-                                },
-                                "lastPrice": {
-                                    "raw": 1.3,
-                                    "fmt": "1.30"
-                                }
-                            }
-                        ]
-                    }]
-                }],
-                "error": null
-            }
+        "^GSPC": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
+        },
+        "O=F": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
+        },
+        "NYT180518C00016000": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
+        },
+        "INPSX": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
+        },
+        "USDGBP=X": {
+          "PRE": {},
+          "REGULAR": {},
+          "POST": {}
         },
         "error": {
+          "error": {
+            "result": null,
             "error": {
-                "result": null,
-                "error": {
-                    "code": "argument-error",
-                    "description": "Missing value for the \"symbols\" argument"
-                }
+              "code": "argument-error",
+              "description": "Missing value for the \"symbols\" argument"
             }
+          }
         }
+      }
     }
+  }
 }

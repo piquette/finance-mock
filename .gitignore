@@ -1,2 +1,6 @@
 finance-mock
 .DS_Store
+.env
+*.test
+*.coverprofile
+dist/

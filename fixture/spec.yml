@@ -1,17 +1,10 @@
 ---
-paths:
-  "/v7/finance/quote":
-    get:
-      description: "<p>Retrieves a quote object.</p>"
-      operationId: RetrieveQuote
-      parameters:
-      - description: "Specifies which symbols to provide quotes for."
-        name: symbols
-        required: true
-      responses:
-        '200':
-          content:
-            resource: quote
-        default:
-          content:
-            resource: error
+services:
+  "yfin":
+    paths:
+      "/v7/finance/quote":
+        parameters:
+        - description: "Specifies which symbols to provide quotes for."
+          name: symbols
+          required: true
+        resource: quote

@@ -1,7 +1,6 @@
 language: go
 
-go:
-  - 1.9
+go: 1.10.x
 
 # magic word to use faster/newer container-based architecture
 sudo: false
@@ -11,20 +10,31 @@ services:
 
 before_install:
   - go get -u github.com/golang/lint/golint
-  - go get -u github.com/jteeuwen/go-bindata/...
 
 script:
-  - go generate
   - make test
   - make vet
-  - scripts/check_gofmt.sh
 
-  # Build and test the Docker image
-  - docker build -t finance-mock .
-  - docker run -d --name finance-mock -p 12111:12111 finance-mock
+  # Build and test the Docker image. It's pushed to Docker Hub as part of the
+  # deploy phase.
+  - docker build -t "$DOCKER_REPO" .
+  - docker run -d --name finance-mock-container -p 12111:12111 "$DOCKER_REPO"
   - docker ps -a
-  - docker exec -it finance-mock /bin/sh -c "cd /go/src/github.com/piquette/finance-mock/; go test ./..."
+
+deploy:
+  provider: script
+  script: bash scripts/docker_push.sh
+  on:
+    # Note that currently on the `master` branch is pushed to Docker Hub. We
+    # may want to do tagged releases as well if this ends up being something
+    # that people use.
+    branch: master
 
 notifications:
   email:
     on_success: never
+
+
+env:
+  global:
+    - DOCKER_REPO="piquette/finance-mock"

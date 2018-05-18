@@ -2,13 +2,13 @@ package server
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"regexp"
 	"strings"
 	"time"
 
 	"github.com/piquette/finance-mock/fixture"
+	"github.com/piquette/finance-mock/utils"
 )
 
 const invalidRoute = "Unrecognized request URL (%s: %s)."
@@ -18,138 +18,91 @@ var pathParameterPattern = regexp.MustCompile(`\{(\w+)\}`)
 // Version is the mock server version number.
 var Version string
 
+// Market is the market sesion.
+var Market = MarketStatePost
+
+// Verbose controls log printing.
+var Verbose = false
+
+// Handler takes care of requests based on resource types.
+type Handler interface {
+	Handle(r *http.Request) (statusCode int, responseData interface{})
+}
+
 // StubServer handles incoming HTTP requests and responds to them appropriately
 // based off the set of routes that it's been configured with.
 type StubServer struct {
-	Spec     *fixture.Spec
-	Fixtures *fixture.Fixtures
-	Verbose  bool
-	Routes   map[fixture.HTTPVerb][]stubServerRoute
-}
-
-// stubServerRoute is a single route in a StubServer's routing table. It has a
-// pattern to match an incoming path and a description of the method that would
-// be executed in the event of a match.
-type stubServerRoute struct {
-	pattern   *regexp.Regexp
-	operation *fixture.Operation
+	Spec       *fixture.Spec
+	Fixtures   *fixture.Fixtures
+	handlerMap map[*regexp.Regexp]*Handler
 }
 
 // HandleRequest handles an HTTP request directed at the API stub.
 func (s *StubServer) HandleRequest(w http.ResponseWriter, r *http.Request) {
 
 	start := time.Now()
-	fmt.Printf("Request: %v %v\n", r.Method, r.URL.Path)
+	utils.Log(Verbose, "Request: %v %v", r.Method, r.URL.Path)
 	w.Header().Set("Request-Id", "req_123")
 
-	// pattern-match a route for the request.
-	// -----------------------------------------
-	route := s.routeRequest(r)
-	if route == nil {
-		description := fmt.Sprintf(invalidRoute, r.Method, r.URL.Path)
-		apiError := createAPIError(errorCode, description)
-		writeResponse(w, r, start, http.StatusNotFound, apiError)
-		return
-	}
-
-	// Determine if the routing table has an appropriate response.
-	// -----------------------------------------
-	specResponse, ok := route.operation.Responses["200"]
-	if !ok {
-		fmt.Printf("Couldn't find 200 response in spec\n")
-		writeResponse(w, r, start, http.StatusInternalServerError,
-			createInternalServerError())
-		return
-	}
-
-	// Parse query and build request data.
-	// -----------------------------------------
-	requestData, err := ParseFormString(r.URL.RawQuery)
-	if err != nil {
-		fmt.Printf("Couldn't parse url query: %v\n", err)
-		writeResponse(w, r, start, http.StatusInternalServerError,
-			createInternalServerError())
-		return
-	}
-
-	// Perform request validation based on route.
-	// -----------------------------------------
-	if requestData["symbols"] == nil {
-		fmt.Printf("Couldn't parse url query: %v\n", err)
-		writeResponse(w, r, start, http.StatusInternalServerError,
-			createInternalServerError())
+	// pattern-match a handler for the request.
+	h := s.routeRequest(r)
+	if h == nil {
+		utils.Log(Verbose, "Couldn't find handler for url: %v", r.URL.String())
+		s.writeResponse(w, r, start, http.StatusNotFound, nil)
 		return
 	}
 
 	// Build the response data.
-	// -----------------------------------------
-	resourceID := specResponse.Content["resource"]
-	responseData := s.Fixtures.Resources[resourceID]
-	if responseData == nil {
-		fmt.Printf("Couldn't find resource for id (%v) in spec\n", resourceID)
-		writeResponse(w, r, start, http.StatusInternalServerError,
-			createInternalServerError())
-		return
-	}
+	statusCode, responseData := h.Handle(r)
 
-	// Log reponse data to console.
-	// -----------------------------------------
-	if s.Verbose {
-		responseDataJSON, err := json.MarshalIndent(responseData, "", "  ")
-		if err != nil {
-			panic(err)
-		}
-		fmt.Printf("Response data: %s\n", responseDataJSON)
-	}
-
-	// Write response.
-	// Done.
-	// -----------------------------------------
-	writeResponse(w, r, start, http.StatusOK, responseData)
+	s.writeResponse(w, r, start, statusCode, responseData)
 }
 
-// InitRouter maps server routes to possible operations.
+// InitRouter maps server routes to handlers.
 func (s *StubServer) InitRouter() error {
-	var numEndpoints int
-	var numPaths int
+	var numServices int
+	var numRoutes int
 
-	s.Routes = make(map[fixture.HTTPVerb][]stubServerRoute)
+	s.handlerMap = make(map[*regexp.Regexp]*Handler)
 
-	for path, verbs := range s.Spec.Paths {
-		numPaths++
+	for id, service := range s.Spec.Services {
 
-		pathPattern := compilePath(path)
-
-		if s.Verbose {
-			fmt.Printf("Compiled path: %v\n", pathPattern.String())
+		var h Handler
+		switch id {
+		case fixture.ServiceYFin:
+			{
+				h = &YFinService{
+					Service:   service,
+					Resources: s.Fixtures.Resources[id],
+				}
+			}
+		default:
+			continue
 		}
 
-		for verb, operation := range verbs {
-			numEndpoints++
+		numServices++
 
-			route := stubServerRoute{
-				pattern:   pathPattern,
-				operation: operation,
-			}
+		for path := range service.Paths {
+			numRoutes++
 
-			// net/http will always give us verbs in uppercase, so build our
-			// routing table this way too
-			verb = fixture.HTTPVerb(strings.ToUpper(string(verb)))
+			route := compilePath(path)
+			utils.Log(Verbose, "Compiled route: %v", route.String())
 
-			s.Routes[verb] = append(s.Routes[verb], route)
+			// Set the routes and operations.
+			s.handlerMap[route] = &h
 		}
 	}
 
-	fmt.Printf("Routing to %v path(s) and %v endpoint(s)\n",
-		numPaths, numEndpoints)
+	utils.Log(Verbose, "Routing to %v service(s) and %v route(s)",
+		numServices, numRoutes)
+
 	return nil
 }
 
-func (s *StubServer) routeRequest(r *http.Request) *stubServerRoute {
-	verbRoutes := s.Routes[fixture.HTTPVerb(r.Method)]
-	for _, route := range verbRoutes {
-		if route.pattern.MatchString(r.URL.Path) {
-			return &route
+func (s *StubServer) routeRequest(r *http.Request) Handler {
+	for rte, hdlr := range s.handlerMap {
+		if rte.MatchString(r.URL.Path) {
+			return *hdlr
 		}
 	}
 	return nil
@@ -179,7 +132,9 @@ func isCurl(userAgent string) bool {
 	return strings.HasPrefix(userAgent, "curl/")
 }
 
-func writeResponse(w http.ResponseWriter, r *http.Request, start time.Time, status int, data interface{}) {
+func (s *StubServer) writeResponse(w http.ResponseWriter, r *http.Request, start time.Time, status int, data interface{}) {
+
+	// Sanity check.
 	if data == nil {
 		data = http.StatusText(status)
 	}
@@ -187,25 +142,32 @@ func writeResponse(w http.ResponseWriter, r *http.Request, start time.Time, stat
 	var encodedData []byte
 	var err error
 
+	// Marshal response.
+	// -----------------
 	if !isCurl(r.Header.Get("User-Agent")) {
 		encodedData, err = json.Marshal(&data)
 	} else {
 		encodedData, err = json.MarshalIndent(&data, "", "  ")
 		encodedData = append(encodedData, '\n')
 	}
-
 	if err != nil {
-		fmt.Printf("Error serializing response: %v\n", err)
-		writeResponse(w, r, start, http.StatusInternalServerError, nil)
+		utils.Log(Verbose, "Error serializing response: %v", err)
+		s.writeResponse(w, r, start, http.StatusInternalServerError, nil)
 		return
 	}
 
+	// Set headers.
 	w.Header().Set("Finance-Mock-Version", Version)
-
 	w.WriteHeader(status)
+
+	// Write response.
 	_, err = w.Write(encodedData)
 	if err != nil {
-		fmt.Printf("Error writing to client: %v\n", err)
+		utils.Log(Verbose, "Error writing to client: %v", err)
 	}
-	fmt.Printf("Response: elapsed=%v status=%v\n", time.Now().Sub(start), status)
+
+	utils.Log(Verbose, "Response data: %s", encodedData)
+
+	// Log result.
+	utils.Log(Verbose, "Response: elapsed=%v status=%v", time.Now().Sub(start), status)
 }

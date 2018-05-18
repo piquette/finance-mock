@@ -1,5 +1,8 @@
+build:
+	go build -v
+
 test:
-	go test ./...
+	go test -v ./...
 
 vet:
 	go vet ./...

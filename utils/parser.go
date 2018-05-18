@@ -1,4 +1,4 @@
-package server
+package utils
 
 import (
 	"fmt"
@@ -173,7 +173,7 @@ func buildParamStructure(key string, parts []keyPart, value string) (map[string]
 		params[key] = subParams
 
 	default:
-		return nil, fmt.Errorf("Invalid key. Raw content can't be mixed in after arrays and maps.")
+		return nil, fmt.Errorf("invalid key- raw content can't be mixed in after arrays and maps")
 	}
 
 	return params, nil
@@ -312,7 +312,7 @@ func parseFormValues(form formValues) (map[string]interface{}, error) {
 
 		rawkeyPart := keyParts[0]
 		if rawkeyPart.KeyType() != keyTypeRaw {
-			return nil, fmt.Errorf(`Invalid key "%v". Keys must start with a name.`, key)
+			return nil, fmt.Errorf(`invalid key "%v" - keys must start with a name`, key)
 		}
 
 		pairParams, err := buildParamStructure(rawkeyPart.Content(), keyParts[1:], value)
