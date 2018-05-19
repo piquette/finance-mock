@@ -18,9 +18,7 @@ import (
 )
 
 const (
-	defaultPort         = 12111
-	defaultFixturesPath = "./fixture/resources.json"
-	defaultSpecPath     = "./fixture/spec.yml"
+	defaultPort = 12111
 )
 
 // verbose tracks whether the program is operating in verbose mode
@@ -38,8 +36,8 @@ func main() {
 	var unix string
 
 	flag.IntVar(&port, "port", defaultPort, "Port to listen on")
-	flag.StringVar(&fixturesPath, "fixtures", defaultFixturesPath, "Path to fixtures to use instead of bundled version")
-	flag.StringVar(&specPath, "spec", defaultSpecPath, "Path to spec to use instead of bundled version")
+	flag.StringVar(&fixturesPath, "fixtures", "", "Path to fixtures to use instead of bundled version")
+	flag.StringVar(&specPath, "spec", "", "Path to spec to use instead of bundled version")
 	flag.StringVar(&unix, "unix", "", "Unix socket to listen on")
 	flag.BoolVar(&verbose, "verbose", false, "Enable verbose mode")
 	flag.BoolVar(&showVersion, "version", false, "Show version and exit")
@@ -81,7 +79,6 @@ func main() {
 	// Set handler.
 	http.HandleFunc("/", stub.HandleRequest)
 	http.HandleFunc("/config/", stub.HandleConfigRequest)
-	// s := http.Server{}
 
 	// Init listener.
 	listener, err := getListener(port, unix)
@@ -94,31 +91,11 @@ func main() {
 	if err != nil {
 		abort(err.Error())
 	}
-
-	// s.Serve(listener)
 }
 
 func abort(message string) {
 	fmt.Fprintf(os.Stderr, message)
 	os.Exit(1)
-}
-
-func getFixtures(fixturesPath string) (*fixture.Fixtures, error) {
-	var data []byte
-	var err error
-
-	data, err = ioutil.ReadFile(fixturesPath)
-
-	if err != nil {
-		return nil, fmt.Errorf("error loading fixtures: %v\n", err)
-	}
-
-	var fixtures fixture.Fixtures
-	err = json.Unmarshal(data, &fixtures)
-	if err != nil {
-		return nil, fmt.Errorf("error decoding fixtures: %v\n", err)
-	}
-	return &fixtures, nil
 }
 
 func getListener(port int, unix string) (net.Listener, error) {
@@ -147,7 +124,13 @@ func getSpec(specPath string) (*fixture.Spec, error) {
 	var data []byte
 	var err error
 
-	data, err = ioutil.ReadFile(specPath)
+	if specPath == "" {
+		// Load the spec information from go-bindata.
+		data, err = Asset("fixture/spec.yml")
+	} else {
+		data, err = ioutil.ReadFile(specPath)
+	}
+
 	if err != nil {
 		return nil, fmt.Errorf("error loading spec: %v\n", err)
 	}
@@ -160,4 +143,27 @@ func getSpec(specPath string) (*fixture.Spec, error) {
 	}
 
 	return &spec, nil
+}
+
+func getFixtures(fixturesPath string) (*fixture.Fixtures, error) {
+	var data []byte
+	var err error
+
+	if fixturesPath == "" {
+		// Load resources from go-bindata.
+		data, err = Asset("fixture/resources.json")
+	} else {
+		data, err = ioutil.ReadFile(fixturesPath)
+	}
+
+	if err != nil {
+		return nil, fmt.Errorf("error loading fixtures: %v\n", err)
+	}
+
+	var fixtures fixture.Fixtures
+	err = json.Unmarshal(data, &fixtures)
+	if err != nil {
+		return nil, fmt.Errorf("error decoding fixtures: %v\n", err)
+	}
+	return &fixtures, nil
 }

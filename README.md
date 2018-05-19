@@ -8,13 +8,14 @@ finance-mock is a mock HTTP server that can be used in lieu of various remote fi
 Get it from the Homebrew tap or download it [from the releases page][releases]:
 
 ``` sh
-brew install ''
+brew tap piquette/finance-mock
+brew install finance-mock
 
 # start a finance-mock service at login
 brew services start finance-mock
 
 # upgrade if you already have it
-brew upgrade ''
+brew upgrade finance-mock
 ```
 
 Or if you have Go installed you can build it:
@@ -56,6 +57,21 @@ Run the test suite:
 go test ./...
 ```
 
+### Binary data
+
+The project uses [go-bindata] to bundle fixture data into
+`bindata.go` so that it's automatically included with built executables.
+Rebuild it with:
+
+``` sh
+# Make sure you have the go-bindata executable (it's not vendored into this
+# repository).
+go get -u github.com/jteeuwen/go-bindata/...
+
+# Generates `bindata.go`.
+go generate
+```
+
 ## Release
 
 Release builds are generated with [goreleaser]. Make sure you have the software
@@ -69,7 +85,7 @@ export GITHUB_TOKEN=...
 Commit changes and tag `HEAD`:
 
 ``` sh
-git tag v0.1.1
+git tag v[NEW_VERSION_NUMBER]
 git push origin --tags
 ```
 
