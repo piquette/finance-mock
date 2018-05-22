@@ -6,3 +6,6 @@ test:
 
 vet:
 	go vet ./...
+
+dev: build
+	./finance-mock --verbose

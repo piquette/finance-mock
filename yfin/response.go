@@ -44,7 +44,7 @@ func CreateQuote(quotes []interface{}) (int, *QuoteResponse) {
 
 // CreateMissingSymbolsError creates an missing argument error for API issues.
 func CreateMissingSymbolsError() (int, *ErrorResponse) {
-	return http.StatusBadRequest, createAPIError(internalErrorInfo, internalErrorDescription)
+	return http.StatusBadRequest, createAPIError(symbolsErrorInfo, symbolsErrorDescription)
 }
 
 // CreateInternalServerError creates an internal server error for API issues.

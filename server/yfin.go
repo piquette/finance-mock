@@ -9,8 +9,6 @@ import (
 	"github.com/piquette/finance-mock/yfin"
 )
 
-const ()
-
 // YFinService is a service that manages yahoo finance requests.
 type YFinService struct {
 	Service   *fixture.Service
@@ -44,17 +42,23 @@ func (y *YFinService) quote(requestData map[string]interface{}) (statusCode int,
 
 	s := requestData["symbols"]
 
-	if s == nil || s == "" {
+	if s == nil {
 		return yfin.CreateMissingSymbolsError()
 	}
 
 	symbolList := strings.Split(s.(string), ",")
 	resourceTree := y.Resources[fixture.YFinQuotes].(map[string]interface{})
 
-	var quotes []interface{}
-	for _, s := range symbolList {
-		resourceTree = resourceTree[s].(map[string]interface{})
-		q := resourceTree[strings.ToUpper(string(Market))]
+	quotes := []interface{}{}
+	for _, symbol := range symbolList {
+
+		r := resourceTree[symbol]
+		if r == nil {
+			continue
+		}
+
+		quoteMap := r.(map[string]interface{})
+		q := quoteMap[strings.ToUpper(string(Market))]
 		quotes = append(quotes, q)
 	}
 
