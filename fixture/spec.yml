@@ -8,3 +8,24 @@ services:
           name: symbols
           required: true
         resource: quote
+      "/v8/finance/chart":
+        parameters:
+        - description: "Specifies beginning of the time series"
+          name: period1
+          required: false
+        - description: "Specifies the end of the time series"
+          name: period2
+          required: false
+        - description: "Specifies which aggregation period each chart bar covers"
+          name: interval
+          required: false
+        - description: "Bool to include pre and post sessions"
+          name: includePrePost
+          required: false
+        - description: "Specifies quote region"
+          name: region
+          required: false
+        - description: "CORS domain"
+          name: corsDomain
+          required: false
+        resource: chart

@@ -6,6 +6,11 @@ const (
 	// YFinQuotePath is the yfin basic quote path.
 	YFinQuotePath Path = "/v7/finance/quote"
 
+	// YFinChart are the yfin chart responses.
+	YFinChart ResourceID = "chart"
+	// YFinChartPath is the yfin chart path.
+	YFinChartPath Path = "/v8/finance/chart"
+
 	// ServiceYFin is the yfin service.
 	ServiceYFin ServiceID = "yfin"
 )

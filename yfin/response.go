@@ -8,6 +8,9 @@ const (
 
 	symbolsErrorDescription = "Missing value for the \"symbols\" argument"
 	symbolsErrorInfo        = "argument-error"
+
+	chartErrorDescription = "No data found, symbol may be delisted"
+	chartErrorInfo        = "Not Found"
 )
 
 // Error internal error information structure.
@@ -32,14 +35,27 @@ type QuoteResponse struct {
 	*Response `json:"quoteResponse"`
 }
 
-// CreateQuote creates an missing argument error for API issues.
-func CreateQuote(quotes []interface{}) (int, *QuoteResponse) {
+// ChartResponse contains a chart response msg.
+type ChartResponse struct {
+	*Response `json:"chart"`
+}
 
+// CreateQuote creates a valid quote response.
+func CreateQuote(quotes []interface{}) (int, *QuoteResponse) {
 	c := &Response{
 		Result: quotes,
 		Error:  nil,
 	}
 	return http.StatusOK, &QuoteResponse{c}
+}
+
+// CreateChart creates a valid chart response.
+func CreateChart(chart interface{}) (int, *ChartResponse) {
+	c := &Response{
+		Result: []interface{}{chart},
+		Error:  nil,
+	}
+	return http.StatusOK, &ChartResponse{c}
 }
 
 // CreateMissingSymbolsError creates an missing argument error for API issues.

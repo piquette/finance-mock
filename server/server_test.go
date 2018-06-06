@@ -8,9 +8,9 @@ import (
 )
 
 func TestCompilePath(t *testing.T) {
-	assert.Equal(t, `\A/v7/quote\z`,
+	assert.Equal(t, `\A/v7/quote`,
 		compilePath(fixture.Path("/v7/quote")).String())
-	assert.Equal(t, `\A/v7/quote/(?P<symbols>[\w-_.]+)\z`,
+	assert.Equal(t, `\A/v7/quote/(?P<symbols>[\w-_.]+)`,
 		compilePath(fixture.Path("/v7/quote/{symbols}")).String())
 }
 

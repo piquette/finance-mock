@@ -26,7 +26,7 @@ var Verbose = false
 
 // Handler takes care of requests based on resource types.
 type Handler interface {
-	Handle(r *http.Request) (statusCode int, responseData interface{})
+	Handle(r *http.Request, rte *regexp.Regexp) (statusCode int, responseData interface{})
 }
 
 // StubServer handles incoming HTTP requests and responds to them appropriately
@@ -38,24 +38,25 @@ type StubServer struct {
 }
 
 // HandleRequest handles an HTTP request directed at the API stub.
-func (s *StubServer) HandleRequest(w http.ResponseWriter, r *http.Request) {
+func (s *StubServer) HandleRequest(w http.ResponseWriter, req *http.Request) {
 
 	start := time.Now()
-	utils.Log(Verbose, "Request: %v %v", r.Method, r.URL.Path)
+	utils.Log(Verbose, "Request: %v %v", req.Method, req.URL.Path)
 	w.Header().Set("Request-Id", "req_123")
 
 	// pattern-match a handler for the request.
-	h := s.routeRequest(r)
-	if h == nil {
-		utils.Log(Verbose, "Couldn't find handler for url: %v", r.URL.String())
-		s.writeResponse(w, r, start, http.StatusNotFound, nil)
+	hndlr, rte := s.routeRequest(req)
+	if hndlr == nil {
+		utils.Log(Verbose, "Couldn't find handler for url: %v", req.URL.String())
+		s.writeResponse(w, req, start, http.StatusNotFound, nil)
 		return
 	}
 
 	// Build the response data.
-	statusCode, responseData := h.Handle(r)
+	h := *hndlr
+	statusCode, responseData := h.Handle(req, rte)
 
-	s.writeResponse(w, r, start, statusCode, responseData)
+	s.writeResponse(w, req, start, statusCode, responseData)
 }
 
 // InitRouter maps server routes to handlers.
@@ -99,13 +100,13 @@ func (s *StubServer) InitRouter() error {
 	return nil
 }
 
-func (s *StubServer) routeRequest(r *http.Request) Handler {
+func (s *StubServer) routeRequest(r *http.Request) (*Handler, *regexp.Regexp) {
 	for rte, hdlr := range s.handlerMap {
 		if rte.MatchString(r.URL.Path) {
-			return *hdlr
+			return hdlr, rte
 		}
 	}
-	return nil
+	return nil, nil
 }
 
 func compilePath(path fixture.Path) *regexp.Regexp {
@@ -125,7 +126,7 @@ func compilePath(path fixture.Path) *regexp.Regexp {
 		}
 	}
 
-	return regexp.MustCompile(pattern + `\z`)
+	return regexp.MustCompile(pattern)
 }
 
 func isCurl(userAgent string) bool {
