@@ -75,6 +75,10 @@ func (y *YFinService) quote(requestData map[string]interface{}) (statusCode int,
 
 		quoteMap := r.(map[string]interface{})
 		q := quoteMap[strings.ToUpper(string(Market))]
+		if q == nil {
+			msg := fmt.Sprintf("Could not find quote for symbol: %s in map, continuing anyway.", symbol)
+			utils.Log(Verbose, msg)
+		}
 		quotes = append(quotes, q)
 	}
 
