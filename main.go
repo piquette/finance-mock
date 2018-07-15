@@ -79,6 +79,7 @@ func main() {
 	// Set handler.
 	http.HandleFunc("/", stub.HandleRequest)
 	http.HandleFunc("/config/", stub.HandleConfigRequest)
+	server := http.Server{}
 
 	// Init listener.
 	listener, err := getListener(port, unix)
@@ -87,10 +88,7 @@ func main() {
 	}
 
 	// Serve.
-	err = http.Serve(listener, nil)
-	if err != nil {
-		abort(err.Error())
-	}
+	server.Serve(listener)
 }
 
 func abort(message string) {

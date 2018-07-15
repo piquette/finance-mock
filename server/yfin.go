@@ -37,14 +37,27 @@ func (y *YFinService) Handle(req *http.Request, rte *regexp.Regexp) (statusCode 
 			// TODO: validate params properly.
 			switch op.ResourceID {
 			case fixture.YFinQuotes:
-				return y.quote(requestData)
-			case fixture.YFinChart:
-				symbol, err := url.PathUnescape(path.Base(req.URL.Path))
-				if err != nil {
-					utils.Log(Verbose, "Couldn't parse chart symbol")
-					break
+				{
+					return y.quote(requestData)
 				}
-				return y.chart(symbol, requestData)
+			case fixture.YFinChart:
+				{
+					symbol, err := url.PathUnescape(path.Base(req.URL.Path))
+					if err != nil {
+						utils.Log(Verbose, "Couldn't parse chart symbol")
+						break
+					}
+					return y.chart(symbol, requestData)
+				}
+			case fixture.YFinOptions:
+				{
+					symbol, err := url.PathUnescape(path.Base(req.URL.Path))
+					if err != nil {
+						utils.Log(Verbose, "Couldn't parse options symbol")
+						break
+					}
+					return y.options(symbol, requestData)
+				}
 			}
 		}
 	}
@@ -87,12 +100,11 @@ func (y *YFinService) quote(requestData map[string]interface{}) (statusCode int,
 
 func (y *YFinService) chart(symbol string, requestData map[string]interface{}) (statusCode int, responseData interface{}) {
 
-	utils.Log(Verbose, "Retrieving chart resource.")
+	utils.Log(Verbose, "Retrieving chart resource for symbol: "+symbol)
 
 	// TODO: validate properties...
 
 	resourceTree := y.Resources[fixture.YFinChart].(map[string]interface{})
-	fmt.Println(symbol)
 	r := resourceTree[symbol]
 	if r == nil {
 		r = resourceTree["error"]
@@ -100,4 +112,26 @@ func (y *YFinService) chart(symbol string, requestData map[string]interface{}) (
 	chartMap := r.(map[string]interface{})
 
 	return yfin.CreateChart(chartMap)
+}
+
+func (y *YFinService) options(symbol string, requestData map[string]interface{}) (statusCode int, responseData interface{}) {
+	utils.Log(Verbose, "Retrieving options resource for symbol: "+symbol)
+
+	tree := y.Resources[fixture.YFinOptions].(map[string]interface{})
+	optionTree := tree[symbol]
+	if tree == nil {
+		utils.Log(Verbose, "Options for symbol not found.")
+		return yfin.CreateOptions(nil)
+	}
+	optionMap := optionTree.(map[string]interface{})
+
+	format := "chain"
+	straddle := requestData["straddle"]
+	if straddle != nil {
+		if straddle.(string) == "true" {
+			format = "straddle"
+		}
+	}
+
+	return yfin.CreateOptions(optionMap[format])
 }

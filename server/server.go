@@ -44,6 +44,12 @@ func (s *StubServer) HandleRequest(w http.ResponseWriter, req *http.Request) {
 	utils.Log(Verbose, "Request: %v %v", req.Method, req.URL.Path)
 	w.Header().Set("Request-Id", "req_123")
 
+	// Reachability check.
+	if req.URL.String() == "/" {
+		s.writeResponse(w, req, start, http.StatusOK, nil)
+		return
+	}
+
 	// pattern-match a handler for the request.
 	hndlr, rte := s.routeRequest(req)
 	if hndlr == nil {

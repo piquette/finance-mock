@@ -29,3 +29,12 @@ services:
           name: corsDomain
           required: false
         resource: chart
+      "/v7/finance/options":
+        parameters:
+        - description: "Specifies whether to format the response as straddles"
+          name: straddle
+          required: false
+        - description: "Optionally specifies an expiration date"
+          name: date
+          required: false
+        resource: options

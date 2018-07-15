@@ -40,13 +40,18 @@ type ChartResponse struct {
 	*Response `json:"chart"`
 }
 
+// OptionsResponse contains a options response msg.
+type OptionsResponse struct {
+	*Response `json:"optionChain"`
+}
+
 // CreateQuote creates a valid quote response.
 func CreateQuote(quotes []interface{}) (int, *QuoteResponse) {
-	c := &Response{
+	q := &Response{
 		Result: quotes,
 		Error:  nil,
 	}
-	return http.StatusOK, &QuoteResponse{c}
+	return http.StatusOK, &QuoteResponse{q}
 }
 
 // CreateChart creates a valid chart response.
@@ -56,6 +61,15 @@ func CreateChart(chart interface{}) (int, *ChartResponse) {
 		Error:  nil,
 	}
 	return http.StatusOK, &ChartResponse{c}
+}
+
+// CreateOptions creates a valid options response.
+func CreateOptions(options interface{}) (int, *OptionsResponse) {
+	o := &Response{
+		Result: []interface{}{options},
+		Error:  nil,
+	}
+	return http.StatusOK, &OptionsResponse{o}
 }
 
 // CreateMissingSymbolsError creates an missing argument error for API issues.
